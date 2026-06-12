@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎂 receipt</title>
+</head>
+
+
+
+<body style="text-align:center; padding:50px;">
+
+    <div style="border: 1px solid black; max-width: 360px; margin: auto; padding: 20px;">
+    <h2> order confirmation 🧾 </h2>
+    <h4><i>your order has been sucessfully placed!</i></h4>
+
+            <p><strong>Order #:</strong> <span id="orderNumber"></span></p>
+            <p><strong>Cart:</strong></p>
+
+            <p id="cartText"></p>
+
+            <br>
+
+            <p><strong>Status:</strong> affirming now</p>
+
+            <p><strong>Estimated date of arrival:</strong> now</p>
+
+            <hr>
+
+            <div style="font-family: monospace; font-size: 30px; letter-spacing: 3px;">
+              <img src="barcode.jpg" alt="Image description" width="300" height="70">
+
+
+            </div>
+
+            <p style="font-style: italic; font-size: 14px;">
+
+                order arrived 🫧
+
+            </p>
+
+        </div>
+
+        <script>
+
+            let uses = localStorage.getItem("websiteUses");
+
+            if (!uses) {
+
+                uses = 1;
+
+            } else {
+
+                uses = Number(uses) + 1;
+
+            }
+
+            localStorage.setItem("websiteUses", uses);
+
+            document.getElementById("orderNumber").textContent = uses;
+
+            document.getElementById("cartText").textContent =
+
+                localStorage.getItem("order");
+
+        </script>
+
+    </body>
+</html>

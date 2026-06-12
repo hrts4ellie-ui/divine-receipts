@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family:Dancing+Script; text-align: center; padding: 40px;">
+
+<head>
+  <title>💫 order confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<center>
+  <h1> life is what you make of it 💌 </h1>
+  <h2> <i> what are you ordering today? </i> </h2>
+</center>
+
+
+
+<textarea id="orderInput" placeholder="type in your order! 🫧"
+style="padding: 12px; width: 80%; max-width: 320px; height: 120px;"></textarea>
+
+<br><br>
+
+<textarea id="orderInput" placeholder="how will you feel when your order arrives? 🌷"
+style="padding: 12px; width: 80%; max-width: 320px; height: 120px;"></textarea>
+
+<br><br>
+
+<button onclick="submitOrder()" style="padding: 12px 20px;">
+  <i> continue to payment!</i>
+</button>
+
+<script>
+
+function submitOrder() {
+
+  const order = document.getElementById("orderInput").value;
+
+  localStorage.setItem("order", order);
+
+  window.location.href = "receipt.html";
+
+}
+
+</script>
+
+</body>
+</html>
